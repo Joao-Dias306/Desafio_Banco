@@ -40,11 +40,11 @@ while True:
 
             if Valor_Depositado > 0:
                 Saldo += Valor_Depositado
-                Extrato += 'Valor depositado de ' + str(Valor_Depositado) + '\n'
+                Extrato += f'Valor depositado de R${Valor_Depositado:.2f}\n'
                 print(f'Valor de R${Valor_Depositado} depositado!!!')
 
             else:
-                print(f'Valor de deposito Inválido. {Valor_Depositado} não é um valor aceito. \n Por favor digite novamente.')
+                print(f'Valor de deposito Inválido. R${Valor_Depositado} não é um valor aceito. \n Por favor digite novamente.')
 
         
         elif Valor_Digitado == 2:
@@ -71,7 +71,7 @@ while True:
             # Garantindo que o valor sacado seja maior que 0
             elif Valor_Sacado > 0 :
                 Saldo -= Valor_Sacado
-                Extrato += 'Valor sacado de ' + str(Valor_Sacado) + '\n'
+                Extrato += f'Valor sacado de R${Valor_Sacado:.2f}\n'
                 print(f'Valor de R${Valor_Sacado} sacado!!!')
                 Numero_Saques += 1
 
@@ -82,6 +82,7 @@ while True:
             print('\n ================= EXTRATO =================')
             print('Não foram realizadas movimentações.' if not Extrato else Extrato)
             print(f'\nSaldo: R$ {Saldo:.2f}\n')
+            print('\n ===========================================')
 
         elif Valor_Digitado == 0:
             break
